@@ -1,4 +1,4 @@
-import Header from "@/components/ui/header.tsx";
+import Header from "@/components/ui/Header/Header.tsx";
 
 
 type LayoutProps = {
@@ -9,7 +9,10 @@ const Layout = ({children}: LayoutProps) => {
     return(
         <>
             <Header></Header>
-            <main>{children}</main>
+            <main>
+                {/*<SidebarTrigger />*/}
+                {children}
+            </main>
         </>
     )
 }
