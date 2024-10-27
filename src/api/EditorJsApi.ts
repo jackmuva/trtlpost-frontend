@@ -2,14 +2,14 @@
 
 class EditorJsApi{
     getSaveImageUrl(){
-        if(process.env.API_URL){
-            return process.env.API_URL.concat('/api/image/save');
+        if(process.env.VITE_API_URL){
+            return process.env.VITE_API_URL.concat('/api/image/save');
         }
     }
 
     getLinkUrl(){
-        if(process.env.API_URL){
-            return process.env.API_URL.concat('/api/fetchUrl');
+        if(process.env.VITE_API_URL){
+            return process.env.VITE_API_URL.concat('/api/fetchUrl');
         }
     }
 }

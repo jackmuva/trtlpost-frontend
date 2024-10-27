@@ -82,7 +82,7 @@ const NavigationMenuLink = React.forwardRef<
     React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Link>
 >(({ className, ...props }, ref) => (
     <NavigationMenuPrimitive.Link className={cn("text-base m-2 font-sans text-indigo-700 " +
-        "hover:text-indigo-500 hover:font-extrabold",
+        "hover:text-indigo-500 hover:-translate-y-0.5",
         className)} ref = {ref} {...props}/>
 ))
 

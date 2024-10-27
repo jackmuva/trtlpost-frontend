@@ -2,7 +2,7 @@ import {
     NavigationMenu,
     NavigationMenuItem, NavigationMenuLink,
     NavigationMenuList,
-} from "@/components/ui/NavigationMenu/navigation-menu.tsx";
+} from "@/components/ui/Header/NavigationMenu/navigation-menu.tsx";
 import {Link} from "@radix-ui/react-navigation-menu";
 import HeaderIcon from "@/components/ui/Header/HeaderIcon.tsx";
 
