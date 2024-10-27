@@ -34,7 +34,8 @@ const Home = () => {
     });
 
     return (
-        <div className={"fixed top-20 left-0 w-screen h-4/5 flex-col px-2 pt-4 overflow-y-auto"}>
+        <div className={"fixed top-20 left-0 w-screen h-4/5 flex-col px-2 pt-4 overflow-y-auto " +
+            "md:w-2/4 md:left-1/4"}>
             {seriesCards}
         </div>
     )

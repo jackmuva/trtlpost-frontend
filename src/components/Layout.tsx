@@ -7,13 +7,12 @@ type LayoutProps = {
 
 const Layout = ({children}: LayoutProps) => {
     return(
-        <>
+        <div>
             <Header></Header>
             <main>
-                {/*<SidebarTrigger />*/}
                 {children}
             </main>
-        </>
+        </div>
     )
 }
 
