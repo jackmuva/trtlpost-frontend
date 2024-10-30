@@ -2,6 +2,13 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 import {useEffect, useState} from "react";
 import {Series} from "@/types/Series.ts";
 import SeriesApi from "@/api/SeriesApi.ts";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious
+} from "@/components/ui/Carousel/carousel.tsx";
 
 const Home = () => {
     const [series, setSeries] = useState<Array<Series>>([]);
@@ -18,25 +25,32 @@ const Home = () => {
 
     const seriesCards = series.map((ser: Series) => {
         return (
-            <Card>
-                <CardHeader>
-                    <CardTitle>{ser.title}</CardTitle>
-                    <CardDescription>Author: {ser.penName}</CardDescription>
-                    <CardDescription>Cadence: every {ser.cadence} day(s)</CardDescription>
-                    <CardDescription>Tags: {ser.tags}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                    <p><b>Description:</b></p>
-                    <p className={"pl-4"}>{ser.summary} </p>
-                </CardContent>
-            </Card>
+            <CarouselItem>
+                <Card>
+                    <CardHeader>
+                        <CardTitle>{ser.title}</CardTitle>
+                        <CardDescription>Author: {ser.penName}</CardDescription>
+                        <CardDescription>Cadence: every {ser.cadence} day(s)</CardDescription>
+                        <CardDescription>Tags: {ser.tags}</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                        <p><b>Description:</b></p>
+                        <p className={"pl-4"}>{ser.summary} </p>
+                    </CardContent>
+                </Card>
+            </CarouselItem>
         )
     });
 
     return (
-        <div className={"fixed top-20 left-0 w-screen h-4/5 flex-col px-2 pt-4 overflow-y-auto " +
-            "md:w-2/4 md:left-1/4"}>
-            {seriesCards}
+        <div className={"fixed top-20 left-0 w-screen flex justify-center"}>
+            <Carousel orientation="horizontal" className={"w-4/5 md:w-1/3"}>
+                <CarouselContent>
+                    {seriesCards}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+            </Carousel>
         </div>
     )
 }
