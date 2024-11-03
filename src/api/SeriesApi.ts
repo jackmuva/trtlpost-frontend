@@ -33,5 +33,17 @@ class SeriesApi extends StandardApi{
     getSeriesByKeyword(keyword: string, page: number){
         return this.get(`/api/series/search/${keyword}?page=${page}`)?.then((response: Response) => response.json());
     }
+    getTopPicks(page: number){
+        return this.get(`/api/series/shelf/top_picks?page=${page}`)?.then((response: Response) => response.json());
+    }
+    getRandom(page: number){
+        return this.get(`/api/series/random?page=${page}`)?.then((response: Response) => response.json());
+    }
+    getPopularCurrent(page: number){
+        return this.get(`/api/series/popularCurrent?page=${page}`)?.then((response: Response) => response.json());
+    }
+    getPopularAllTime(page: number){
+        return this.get(`/api/series/popularAllTime?page=${page}`)?.then((response: Response) => response.json());
+    }
 }
 export default new SeriesApi();
