@@ -1,14 +1,6 @@
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/SeriesCard/card.tsx";
 import {useEffect, useState} from "react";
 import {Series} from "@/types/Series.ts";
 import SeriesApi from "@/api/SeriesApi.ts";
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious
-} from "@/components/ui/Carousel/carousel.tsx";
 import {Shelf} from "@/components/ui/Shelf/Shelf.tsx";
 
 const Home = () => {
@@ -27,8 +19,12 @@ const Home = () => {
 
 
     return (
-        <div>
+        <div className={"absolute py-24 top-0 left-0 bg-neutral-50"}>
             <Shelf name="~Newest~"  series={newest}></Shelf>
+            <Shelf name="~Our Picks~"  series={newest}></Shelf>
+            <Shelf name="~Popular Right Now~"  series={newest}></Shelf>
+            <Shelf name="~Most Read All Time~"  series={newest}></Shelf>
+            <Shelf name="~Random~"  series={newest}></Shelf>
         </div>
     )
 }

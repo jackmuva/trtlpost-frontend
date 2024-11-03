@@ -9,7 +9,7 @@ import HeaderIcon from "@/components/ui/Header/HeaderIcon.tsx";
 
 const Header = () => {
     return (
-        <div className={"fixed top-0 left-0 border-b-2 w-screen flex justify-center z-30 mb-2"}>
+        <div className={"fixed top-0 left-0 border-b-2 w-screen flex justify-center z-30 mb-2 bg-neutral-100"}>
             <div className={"w-screen md:w-7/12 flex justify-between"}>
                 <HeaderIcon></HeaderIcon>
                 <NavigationMenu>

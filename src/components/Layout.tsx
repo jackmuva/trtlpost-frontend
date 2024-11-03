@@ -7,12 +7,12 @@ type LayoutProps = {
 
 const Layout = ({children}: LayoutProps) => {
     return(
-        <div>
+        <>
             <Header></Header>
             <main>
                 {children}
             </main>
-        </div>
+        </>
     )
 }
 
