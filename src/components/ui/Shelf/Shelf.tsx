@@ -31,7 +31,7 @@ export const Shelf = ({name, series}: {name: string, series: Array<Series>}) => 
 
     return(
         <div className={"w-screen"}>
-            <div className={"ml-4 md:ml-56 flex justify-start font-bold text-2xl text-blue-600"}>{name}</div>
+            <div className={"ml-4 md:ml-56 mb-2 flex justify-start font-bold text-2xl text-blue-600"}>{name}</div>
             <div className={"flex justify-center"}>
                 <Carousel orientation="horizontal" className={"w-4/5 md:w-2/3"}>
                     <CarouselContent>
