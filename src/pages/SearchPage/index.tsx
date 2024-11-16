@@ -38,7 +38,7 @@ export const SearchPage = () => {
 
     return (
         <>
-            <div className={"absolute py-24 top-0 left-0 flex flex-col space-y-4 w-screen bg-neutral-50"}>
+            <div className={"absolute py-20 top-0 left-0 flex flex-col space-y-4 w-screen bg-neutral-50"}>
                 <div className={"flex flex-col justify-center items-center space-y-1"}>
                     {seriesCards}
                 </div>

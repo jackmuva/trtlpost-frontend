@@ -34,7 +34,7 @@ const Home = () => {
 
 
     return (
-        <div className={"absolute pt-20 pb-24 top-0 left-0 bg-neutral-50 flex flex-col space-y-4"}>
+        <div className={"absolute py-20 top-0 left-0 bg-neutral-50 flex flex-col space-y-4"}>
             <Shelf name="Newest"  series={newest}></Shelf>
             <Shelf name="Our Picks"  series={picks}></Shelf>
             <Shelf name="Popular Right Now"  series={popular}></Shelf>
