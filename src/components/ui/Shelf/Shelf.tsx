@@ -30,16 +30,19 @@ export const Shelf = ({name, series}: {name: string, series: Array<Series>}) => 
     });
 
     return(
-        <div className={"w-screen"}>
-            <div className={"ml-4 md:ml-56 mb-2 flex justify-start font-bold text-2xl text-blue-600"}>{name}</div>
-            <div className={"flex justify-center"}>
-                <Carousel orientation="horizontal" className={"w-4/5 md:w-2/3"}>
-                    <CarouselContent>
-                        {seriesCards}
-                    </CarouselContent>
-                    <CarouselPrevious/>
-                    <CarouselNext/>
-                </Carousel>
+        <div className={"w-screen flex justify-center md:my-4"}>
+            <div className={"border-2 bg-neutral-100 rounded-xl w-11/12 p-2 md:w-5/6 md:p-4 md:pt-2" +
+                ""}>
+                <div className={"ml-4 md:ml-56 mb-2 flex justify-start font-bold text-2xl text-blue-600"}>{name}</div>
+                <div className={"flex justify-center"}>
+                    <Carousel orientation="horizontal" className={"w-11/12 md:w-3/4"}>
+                        <CarouselContent>
+                            {seriesCards}
+                        </CarouselContent>
+                        <CarouselPrevious/>
+                        <CarouselNext/>
+                    </Carousel>
+                </div>
             </div>
         </div>
     )
