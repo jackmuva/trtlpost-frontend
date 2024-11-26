@@ -6,6 +6,9 @@ export default {
   "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+	  fontFamily: {
+		  sans: ['"Alegreya"']
+	  },
   	extend: {
   		borderRadius: {
   			lg: 'var(--radius)',
