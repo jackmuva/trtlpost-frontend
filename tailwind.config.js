@@ -7,7 +7,7 @@ export default {
   ],
   theme: {
 	  fontFamily: {
-		  sans: ['"Alegreya"']
+		  alegreya: ['"Alegreya"']
 	  },
   	extend: {
   		borderRadius: {
