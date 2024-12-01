@@ -7,7 +7,6 @@ import {
     FormDescription,
     FormField,
     FormItem,
-    FormLabel,
     FormMessage,
 } from "@/components/ui/Form/form"
 import {Input} from "@/components/ui/Input/input.tsx";
@@ -44,13 +43,15 @@ export function LoginPage() {
 
     return (
         <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
+                <FormDescription>
+                    Create an account and login to get started writing email series
+                </FormDescription>
                 <FormField
                     control={form.control}
                     name="username"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Username</FormLabel>
                             <FormControl>
                                 <Input placeholder="username" {...field} />
                             </FormControl>
@@ -63,7 +64,6 @@ export function LoginPage() {
                     name="email"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Email</FormLabel>
                             <FormControl>
                                 <Input placeholder="email" {...field} />
                             </FormControl>
@@ -76,7 +76,6 @@ export function LoginPage() {
                     name="password"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Password</FormLabel>
                             <FormControl>
                                 <Input placeholder="password" {...field} />
                             </FormControl>
